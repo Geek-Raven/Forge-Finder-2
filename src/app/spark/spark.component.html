@@ -1,3 +1,12 @@
-<p>
-  spark works!
-</p>
+<div class="card" *ngFor="let dwarf of dwarves">
+  <div class="card-body">
+    <h5 class="card-title">{{dwarf.name}}</h5>
+    <p class="card-text">
+      Height: {{dwarf.height}}
+      <br/> BeardColor: {{dwarf.beardColor}}
+      <br/> BeardLength: {{dwarf.beardLength}}
+      <br/> Weapon: {{dwarf.weaponOfChoice}}
+
+    </p>
+  </div>
+</div>

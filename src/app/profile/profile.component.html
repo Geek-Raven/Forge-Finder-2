@@ -1,3 +1,37 @@
-<p>
-  profile works!
-</p>
+<h3>Your Profile</h3>
+
+<form>
+  <div class="form-group row">
+    <label for="dwarfName" class="col-sm-3 col-form-label">Name:</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="dwarfName" name="dwarfName" [(ngModel)]="currentDwarf.name">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="dwarfHeight" class="col-sm-3 col-form-label">Height:</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="dwarfHeight" name="dwarfHeight" [(ngModel)]="currentDwarf.height">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="dwarfBeardCol" class="col-sm-3 col-form-label">Beard Color:</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="dwarfBeardCol" name="dwarfBeardCol" [(ngModel)]="currentDwarf.beardColor">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="dwarfBeardLen" class="col-sm-3 col-form-label">Beard Length:</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="dwarfBeardLen" name="dwarfBeardLen" [(ngModel)]="currentDwarf.beardLength">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="dwarfWeapon" class="col-sm-3 col-form-label">Weapon of Choice:</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="dwarfWeapon" name="dwarfWeapon" [(ngModel)]="currentDwarf.weaponOfChoice">
+    </div>
+  </div>
+  <div class="form-group row">
+    <button type="submit" class="offset-sm-10 btn btn-secondary" (click)="submitDwarf()" [disabled]="!currentDwarf.name || !currentDwarf.height || !currentDwarf.beardColor || !currentDwarf.beardLength || !currentDwarf.weaponOfChoice">Set in stone</button>
+  </div>
+</form>
