@@ -1,8 +1,10 @@
 export class Dwarf {
-    id: number;
-    name: string;
-    height: string;
-    beardColor: string;
-    beardLength: number;
-    weaponOfChoice: string;
+  id: number;
+  name: string;
+  height: string;
+  beardColor: string;
+  beardLength: number;
+  favoriteDrink: string;
+  weaponOfChoice: string;
+  occupation: string;
 }

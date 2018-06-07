@@ -32,6 +32,23 @@
     </div>
   </div>
   <div class="form-group row">
+    <label for="dwarfDrink" class="col-sm-3 col-form-label">Favorite Drink:</label>
+    <div class="col-sm-9">
+      <select name="dwarfDrink" class="form-control" [(ngModel)]="currentDwarf.favoriteDrink">
+        <option *ngFor="let drink of favoriteDrink"> {{drink}} </option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="dwarfJob" class="col-sm-3 col-form-label">Occupation:</label>
+    <div class="col-sm-9">
+      <select name="dwarfOccupation" class="form-control" [(ngModel)]="currentDwarf.occupation">
+        <option *ngFor="let occupation of occupations"> {{occupation}} </option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group row">
     <button type="submit" class="offset-sm-10 btn btn-secondary" (click)="submitDwarf()" [disabled]="!currentDwarf.name || !currentDwarf.height || !currentDwarf.beardColor || !currentDwarf.beardLength || !currentDwarf.weaponOfChoice">Set in stone</button>
   </div>
 </form>
