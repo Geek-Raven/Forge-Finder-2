@@ -15,9 +15,50 @@ import { Http, Headers, Response } from "@angular/http";
 export class DwarfService {
   dwarves: Dwarf[] = [];
 
-  // getDwarves() {
-  //   return this.dwarves;
-  // }
+  favoriteDrink: string[] = [
+    "Beer",
+    "Mai-Tai",
+    "Dragons Blood",
+    "Rob Roy",
+    "Elf Earwax",
+    "Moonshine",
+    "Moutain-Dew",
+    "Apple Juice"
+  ];
+
+  occupations: string[] = [
+    "Smith",
+    "Forager",
+    "Farmer",
+    "Bladesmith",
+    "Miner",
+    "Warrior",
+    "Mercenary",
+    "Bootlegger",
+    "Breeder",
+    "Mouth Breather",
+    "Ultimate Ladies-Man"
+  ];
+
+  clans: string[] = [
+    "Silver-Axe",
+    "Gold-Dragon",
+    "Emerald Jackals",
+    "Ruby Wolves",
+    "Steel Bears"
+  ];
+
+  getDrinks() {
+    return this.favoriteDrink;
+  }
+
+  getJob() {
+    return this.occupations;
+  }
+
+  getClan() {
+    return this.clans;
+  }
 
   getDwarves(): Observable<Dwarf[]> {
     return this.http.get<Dwarf[]>(

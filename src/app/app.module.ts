@@ -9,6 +9,7 @@ import { ProfileComponent } from "./profile/profile.component";
 import { AppRoutingModule } from ".//app-routing.module";
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
+import { BeardComponent } from './beard/beard.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HttpClientModule } from "@angular/common/http";
     NavComponent,
     HomeComponent,
     SparkComponent,
-    ProfileComponent
+    ProfileComponent,
+    BeardComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

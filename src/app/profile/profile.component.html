@@ -28,7 +28,7 @@
   <div class="form-group row">
     <label for="dwarfWeapon" class="col-sm-3 col-form-label">Weapon of Choice:</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" id="dwarfWeapon" name="dwarfWeapon" [(ngModel)]="currentDwarf.weaponOfChoice">
+      <input type="text" class="form-control" id="dwarfWeapon" name="dwarfWeapon" [(ngModel)]="currentDwarf.weapon">
     </div>
   </div>
   <div class="form-group row">
@@ -47,8 +47,16 @@
       </select>
     </div>
   </div>
+  <div class="form-group row">
+    <label for="dwarfJob" class="col-sm-3 col-form-label">Clan:</label>
+    <div class="col-sm-9">
+      <select name="dwarfClan" class="form-control" [(ngModel)]="currentDwarf.clan">
+        <option *ngFor="let clan of clans"> {{clan}} </option>
+      </select>
+    </div>
+  </div>
 
   <div class="form-group row">
-    <button type="submit" class="offset-sm-10 btn btn-secondary" (click)="submitDwarf()" [disabled]="!currentDwarf.name || !currentDwarf.height || !currentDwarf.beardColor || !currentDwarf.beardLength || !currentDwarf.weaponOfChoice">Set in stone</button>
+    <button type="submit" class="offset-sm-10 btn btn-secondary" (click)="submitDwarf()" [disabled]="!currentDwarf.name || !currentDwarf.height || !currentDwarf.beardColor || !currentDwarf.beardLength || !currentDwarf.weapon">Set in stone</button>
   </div>
 </form>
